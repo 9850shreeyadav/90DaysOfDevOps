@@ -30,7 +30,11 @@
 
 4. 5 Commands
    -   ps: view running process
+     <img width="383" height="57" alt="Screenshot from 2026-02-13 16-03-41" src="https://github.com/user-attachments/assets/6a69795e-773f-4b70-9289-2d431532bbc4" />
+
    -   htop or top: Monitor CPU and memory usage
    -   systemctl status --servicename--: check service status
+   <img width="1115" height="425" alt="image" src="https://github.com/user-attachments/assets/ed2c0ed6-e3e8-4463-a898-697b93564d12" />
+
    -   jourmalctl: view system logs
    -   kill --PID--: kill the process 
