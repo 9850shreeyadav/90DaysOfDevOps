@@ -18,28 +18,15 @@
 
 ![alt text](image.png)
 
-- What happens when you run `kubectl apply -f pod.yaml`? Trace the request through each component.
--   kubectl
-        ↓
-API Server (validate the YML)
-        ↓
-etcd (stores desired state)
-        ↓
-Controller Manager (Triggers creation process on the basis of state mismatch)
-        ↓
-Scheduler (assigns Pod to a Node)
-        ↓
-API Server (updates assignment)
-        ↓
-kubelet (on selected Worker Node)
-        ↓
-kube-proxy (handles networking)
+1. What happens when you run `kubectl apply -f pod.yaml`? Trace the request through each component.
+-   kubectl ->  API Server (validate the YML)  -> etcd (stores desired state)  -> Controller Manager (Triggers creation process on the basis of state mismatch)  -> Scheduler (assigns Pod to a Node) ->
+API Server (updates assignment)  -> kubelet (on selected Worker Node)  -> kube-proxy (handles networking)
 
-- What happens if the API server goes down?
+2. What happens if the API server goes down?
 -   API Server is entry point of kubernetes, no kuberctl command will run scheduler will stop listening.
 -   Existing pods keep running, kubelet continues managing containers locally
 
-- What happens if a worker node goes down?
+3. What happens if a worker node goes down?
 -   kubelet stops reporting to API Server
 -   Control Plane notices node is NotReady
 -   After timeout Pods on that node are marked failed
@@ -58,23 +45,28 @@ kube-proxy (handles networking)
 ### Task 5: Explore Your Cluster
 
 kubectl cluster-info
--   ![alt text](image-3.png)
+![alt text](image-3.png)
 
 kubectl get nodes
--   ![alt text](image-4.png)
+
+![alt text](image-4.png)
 
 kubectl describe node juddy-cluster-control-plane
--   ![alt text](image-5.png)
--   ![alt text](image-6.png)
+
+![alt text](image-5.png)
+![alt text](image-6.png)
 
 kubectl get namespaces
--   ![alt text](image-7.png)
+
+![alt text](image-7.png)
 
 kubectl get pods -A
--   ![alt text](image-8.png)
+
+![alt text](image-8.png)
 
 kubectl get pods -n flask-app
--   ![alt text](image-9.png)
+
+![alt text](image-9.png)
 
 
 ### Task 6: Cluster Lifecycle
