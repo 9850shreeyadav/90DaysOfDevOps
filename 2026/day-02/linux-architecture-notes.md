@@ -36,5 +36,5 @@
    -   systemctl status --servicename--: check service status
    <img width="1115" height="425" alt="image" src="https://github.com/user-attachments/assets/ed2c0ed6-e3e8-4463-a898-697b93564d12" />
 
-   -   jourmalctl: view system logs
+   -   journalctl: view system logs
    -   kill --PID--: kill the process 
