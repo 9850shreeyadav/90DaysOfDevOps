@@ -25,7 +25,7 @@
         -   orphan - Parent died before child
        
 3.  What systemd does and why it matters
-   -   Th systemd starts service at boot, restart failed services, manges service dependencies, collects logs, handled targets (like runlevels)
+   -   The systemd starts service at boot, restart failed services, manges service dependencies, collects logs, handled targets (like runlevels)
    -   The systemd can auto-restart crashed services, makes troubleshooting easier, centralized logs using journalctl, and it is used in almost all modern Linux distros.
 
 4. 5 Commands
