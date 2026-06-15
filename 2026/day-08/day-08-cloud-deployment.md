@@ -49,34 +49,9 @@ sudo cat /var/log/nginx/error.log
 ```
 ![alt text](<Screensh.png>) 
 
-- Log file saved as:
-- Notes:
 
-## Commands Used
-
-```bash
-# Add the commands you used here
-```
 
 ## Challenges Faced
 
-- Problem:
-- Solution:
-
-## What I Learned
-
-- Learned concept 1
-- Learned concept 2
-- Learned concept 3
-
-## Screenshots
-
-- SSH connection screenshot
-- Nginx webpage screenshot
-- Log output screenshot
-
-## Summary
-
-- What went well:
-- What was difficult:
-- Final takeaway:
+- Problem: not able to connect with ssh once enabled http, firstly i just updated the exisitng security group, i was not aware of multiple inbound rules.
+- Solution: i added new inbound rule and both worked.
